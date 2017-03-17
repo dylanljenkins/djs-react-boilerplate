@@ -12,7 +12,8 @@
     "bootstrap": "next",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "reactstrap": "^4.2.0"
+    "reactstrap": "^4.2.0",
+    "tslint": "^4.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
@@ -39,6 +40,8 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.13.2",
     "ts-loader": "^2.0.1",
+    "tslint-eslint-rules": "^3.5.0",
+    "tslint-react": "^2.5.0",
     "typescript": "^2.2.1",
     "typings-for-css-modules-loader": "^1.5.0",
     "webpack": "^2.2.0",

@@ -1,9 +1,23 @@
-# WebpackBin project
+# React Boilerplate
 
-## Start
+## Overview
 
-`npm install`
+DJ's React boilerplate, built upon:
 
-`npm start`
+- React
+- Webpack 2
+- Typescript
+- MobX
+- React Router 4
+- SASS
+- Bootstrap 4
 
-Go to `localhost:3000`
+Still to come: 
+
+- TSLint
+- Jest
+- An Express server
+
+Far off:
+
+- Server-side rendering

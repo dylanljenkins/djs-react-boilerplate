@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {render} from 'react-dom';
 import {useStrict} from 'mobx';
-import {Provider} from "mobx-react";
+import {Provider} from 'mobx-react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import App from './components/App/App';
 import './styles/styleImports';
@@ -16,5 +16,5 @@ render(
             <Route path="/" component={App}/>
         </Router>
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('root'),
 );

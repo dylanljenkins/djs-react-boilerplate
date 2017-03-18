@@ -11,10 +11,10 @@ DJ's React boilerplate, built upon:
 - React Router 4
 - SASS
 - Bootstrap 4
+- TSLint
 
 Still to come: 
 
-- TSLint
 - Jest
 - An Express server
 

@@ -1,12 +1,15 @@
 import * as React from 'react';
-import * as styles from './styles.scss';
-import {Button} from 'reactstrap';
+import Header from '../Header/Header';
+import Home from '../Home/Home';
+import {Route} from 'react-router';
+import About from '../About/About';
 
 const App = () => {
     return (
         <div>
-            <p className={styles.main}>Sup</p>
-            <Button color="danger">Test</Button>
+            <Header/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About}/>
         </div>
     );
 };

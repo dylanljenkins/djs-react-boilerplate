@@ -5,6 +5,7 @@
     "tslint-eslint-rules"
   ],
   "rules": {
+    "jsx-boolean-value": false,
     "ordered-imports": false,
     "align": [
       true,

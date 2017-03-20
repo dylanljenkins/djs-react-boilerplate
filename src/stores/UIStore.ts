@@ -1,12 +1,10 @@
-import {observable, action, useStrict} from 'mobx';
+import {observable, useStrict} from 'mobx';
 
 useStrict(true);
 
-export class UIStore {
-    @observable public flag: boolean = false;
+class UIStore {
 
-    @action
-    private swapFlag = () => {
-        this.flag = !this.flag;
-    }
+    @observable public flag: boolean = false;
 }
+
+export const uiStore = new UIStore();

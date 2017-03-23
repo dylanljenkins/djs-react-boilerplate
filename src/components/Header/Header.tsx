@@ -1,9 +1,9 @@
 // Header component. This uses components from reactstrap, a collection of Bootstrap 4 components for React.
 
-import * as React from 'react';
-import {Navbar, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
-import {Link} from 'react-router-dom';
 import {observer} from 'mobx-react';
+import * as React from 'react';
+import {Link} from 'react-router-dom';
+import {Nav, Navbar, NavbarBrand, NavItem, NavLink} from 'reactstrap';
 import Login from './Login/Login';
 
 const Header = observer(() => {

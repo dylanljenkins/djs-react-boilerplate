@@ -5,6 +5,13 @@
 A modern React + TypeScript + MobX boilerplate.
 The source files are commented with further explanations about how everything pieces together.
 
+## Running
+
+- Install Node.js
+- Navigate to the project folder
+- `npm i`
+- `npm start`
+
 ## Components
 
 ### Implemented

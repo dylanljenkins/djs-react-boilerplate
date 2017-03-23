@@ -4,15 +4,15 @@
 
 import * as React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
 import {Route} from 'react-router';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+import {BrowserRouter as Router} from 'react-router-dom';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 
 // Style imports.
-import './styles/global.scss';
+import './global.scss';
 
 render(
     <Router history={history}>

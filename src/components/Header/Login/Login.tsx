@@ -2,15 +2,15 @@
 // The component renders differently depending on the loggingIn and loggedIn observables.
 // The component calls the attemptLogIn action, updating the loggingIn and loggedIn observables.
 
-import * as React from 'react';
-import {Button, Input, InputGroup, InputGroupButton, Progress, Form} from 'reactstrap';
-import {userStore} from '../../../stores/UserStore';
 import {observer} from 'mobx-react';
+import * as React from 'react';
+import {Button, Form, Input, InputGroup, InputGroupButton, Progress} from 'reactstrap';
+import {userStore} from '../../../stores/UserStore';
 
 const Login = observer(() => {
     if (userStore.loggingIn) {
         return (
-            <Progress style={{width: '400px'}} animated color="primary" value="100" />
+            <Progress style={{width: '400px'}} animated color="primary" value="100"/>
         );
     } else if (userStore.loggedIn) {
         return (
@@ -20,8 +20,8 @@ const Login = observer(() => {
         return (
             <Form inline>
                 <InputGroup>
-                    <Input placeholder="Username" onChange={userStore.updateUsernameField} />
-                    <Input placeholder="Password" type="password" onChange={userStore.updatePassword} />
+                    <Input placeholder="Username" onChange={userStore.updateUsernameField}/>
+                    <Input placeholder="Password" type="password" onChange={userStore.updatePassword}/>
                     <InputGroupButton color="primary" onClick={userStore.attemptLogIn}>Log In</InputGroupButton>
                 </InputGroup>
             </Form>

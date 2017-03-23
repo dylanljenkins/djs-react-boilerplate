@@ -7,6 +7,7 @@
 
 import {action, observable, useStrict} from 'mobx';
 
+// Ensures that actions are the only functions that can update observables.
 useStrict(true);
 
 class UserStore {
@@ -15,18 +16,16 @@ class UserStore {
     @observable public loggedIn = false;
     @observable public loggingIn = false;
 
-    // These private members keep track of the username and password fields as a user fills them in.
     private usernameField: string;
     private passwordField: string;
 
-    // Actions are the only functions that can update observables.
     @action public attemptLogIn = () => {
 
         // Set a "loading" flag so that the UI can display that it's currently loading.
         this.loggingIn = true;
 
         // Fake server call by waiting 2 seconds.
-        new Promise((res) => setTimeout(res, 1000)).then(action((res) => {
+        new Promise((res) => setTimeout(res, 1000)).then(action(() => {
 
             // Log in if the username and password match.
             this.loggedIn = this.usernameField === 'admin' && this.passwordField === 'password';
@@ -38,6 +37,7 @@ class UserStore {
         this.loggedIn = false;
     }
 
+    // usernameField and passwordField are updated as the user types.
     public updateUsernameField = (e) => {
         this.usernameField = e.target.value;
     }

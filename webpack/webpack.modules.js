@@ -1,3 +1,5 @@
+// Describes webpack modules that can be used by either the development or production builds.
+
 const webpack = require('webpack');
 const path = require('path');
 const paths = require('./paths');

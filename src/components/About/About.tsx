@@ -1,10 +1,8 @@
 import * as React from 'react';
 
-// Match is the react-router set of props
-const About = (match) => {
-    console.log(match);
+const About = () => {
     return (
-        <p>About</p>
+        <p>About me!</p>
     );
 };
 

@@ -1,3 +1,5 @@
+// Describes important paths in the app that webpack needs to know about.
+
 const path = require('path');
 
 exports.src = path.resolve(__dirname, "..", "src");

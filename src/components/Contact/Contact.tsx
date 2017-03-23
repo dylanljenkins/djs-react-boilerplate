@@ -1,14 +1,11 @@
 import * as React from 'react';
-import {observer} from 'mobx-react';
-import {userStore} from '../../stores/UserStore';
 
-const Contact = (observer(() => {
+const Contact = () => {
     return (
         <div>
-            {userStore.username}
-            <button onClick={userStore.testAction}>Test Action</button>
+            Contact me!
         </div>
     );
-}));
+};
 
 export default Contact;

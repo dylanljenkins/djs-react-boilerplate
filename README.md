@@ -1,23 +1,28 @@
-# React Boilerplate
+# DJ's React Boilerplate
 
 ## Overview
 
-DJ's React boilerplate, built upon:
+A modern React + TypeScript + MobX boilerplate.
+The source files are commented with further explanations about how everything pieces together.
 
-- React
-- Webpack 2
-- Typescript
-- MobX
-- React Router 4
-- SASS
-- Bootstrap 4
-- TSLint
+## Components
 
-Still to come: 
+### Implemented
 
-- Jest
-- An Express server
+- [React](https://facebook.github.io/react/)
+- [Webpack 2](https://webpack.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MobX](https://mobx.js.org/)
+- [React Router 4](https://github.com/ReactTraining/react-router)
+- [SASS](https://sass-lang.com/)
+- [Reactstrap](https://reactstrap.github.io/)
+- [TSLint](https://palantir.github.io/tslint/)
 
-Far off:
+### Still to come
+
+- [Jest](https://facebook.github.io/jest/)
+- [Express](https://expressjs.com/)
+
+### Far off
 
 - Server-side rendering

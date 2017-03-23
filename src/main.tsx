@@ -1,15 +1,27 @@
+// The root file of the project.
+// This file takes the outermost components of the React application and renders them.
+// The only time you'll ever see getElementById!
+
 import * as React from 'react';
 import {render} from 'react-dom';
-import {useStrict} from 'mobx';
 import {BrowserRouter as Router} from 'react-router-dom';
-import App from './components/App/App';
-import './styles/styleImports';
+import {Route} from 'react-router';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
-useStrict(true);
+// Style imports.
+import './styles/global.scss';
 
 render(
     <Router history={history}>
-        <App/>
+        <div>
+            <Header/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
+        </div>
     </Router>,
     document.getElementById('root'),
 );

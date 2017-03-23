@@ -1,3 +1,5 @@
+// This is the root webpack file. It describes how webpack should build the webapp in either prod or dev mode.
+
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const modules = require('./webpack/webpack.modules');

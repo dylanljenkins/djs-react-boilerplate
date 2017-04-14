@@ -12,7 +12,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
 // Style imports.
-import './global.scss';
+import './styles/global.scss';
 
 render(
     <Router history={history}>

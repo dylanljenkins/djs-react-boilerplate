@@ -7,10 +7,13 @@
     "build": "webpack -p --progress --colors"
   },
   "dependencies": {
-    "bootstrap": "next",
+    "@types/react-bootstrap": "^0.0.47",
+    "bootstrap-sass": "^3.3.7",
+    "file-loader": "^0.11.1",
     "react": "^15.5.4",
+    "react-bootstrap": "^0.30.8",
     "react-dom": "^15.5.4",
-    "reactstrap": "^4.5.0"
+    "url-loader": "^0.5.8"
   },
   "devDependencies": {
     "@types/node": "^7.0.12",

@@ -13,7 +13,7 @@ const common = {
         modules.htmlWebpackPlugin
     ],
     module: {
-        rules: modules.loadTs
+        rules: modules.loadDefault
     }
 };
 

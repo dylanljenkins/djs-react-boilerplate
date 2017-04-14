@@ -3,7 +3,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const paths = require('./paths');
-const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -20,12 +19,16 @@ const autoprefix = () => {
     }
 };
 
-exports.loadTs = [
+exports.loadDefault = [
     {
         test: /\.ts$|\.tsx$/,
         exclude: /node_modules/,
         use: ["babel-loader", "awesome-typescript-loader"]
-    }
+    },
+    {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/font-woff" },
+    {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/octet-stream" },
+    {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
+    {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=image/svg+xml" }
 ];
 
 exports.loadScss = [

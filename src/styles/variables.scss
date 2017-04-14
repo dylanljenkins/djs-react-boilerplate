@@ -1,0 +1,21 @@
+// Define any custom sass variables here.
+// Because this file only contains variables, it is safe to import into the sass stylesheets of components.
+
+$zuccala50: #fef3e0;
+$zuccala100: #fbe0b3;
+$zuccala200: #f9cc80;
+$zuccala300: #f7b84d;
+$zuccala400: #f5a826;
+$zuccala500: #f39900;
+$zuccala600: #f19100;
+$zuccala700: #ef8600;
+$zuccala800: #ed7c00;
+$zuccala900: #ea6b00;
+$zuccalaA100: #ffffff;
+$zuccalaA200: #ffebde;
+$zuccalaA400: #ffccab;
+$zuccalaA700: #ffbd91;
+
+$brand-primary: $zuccala500;
+
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";

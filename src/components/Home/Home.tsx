@@ -3,13 +3,12 @@
 // See https://github.com/css-modules/css-modules
 
 import * as React from 'react';
-import {Jumbotron} from 'reactstrap';
-import * as styles from './home.scss';
+import {Jumbotron} from 'react-bootstrap';
 
 const Home = () => {
     return (
-        <Jumbotron className={styles.root}>
-            <h1 className="display-3">Hello, world!</h1>
+        <Jumbotron>
+            <h1>Hello, world!</h1>
             <p>
                 Welcome to DJ's React Boilerplate.
                 See the source code <a href="https://github.com/dylanljenkins/djs-react-boilerplate">here</a>.

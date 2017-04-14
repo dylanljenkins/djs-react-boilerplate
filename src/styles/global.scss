@@ -1,0 +1,10 @@
+// Any global scss styles or imports live in here.
+
+// Custom variables
+@import "./variables";
+
+// Reassign the icon path to be relative to this file.
+$icon-font-path: ("../../node_modules/bootstrap-sass/assets/fonts/bootstrap/");
+
+// Bootstrap
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

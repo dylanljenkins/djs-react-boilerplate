@@ -3,19 +3,28 @@
 // See https://github.com/css-modules/css-modules
 
 import * as React from 'react';
-import {Jumbotron} from 'react-bootstrap';
+import {Grid, PageHeader} from 'react-bootstrap';
+import {Row, Col} from 'react-flexbox-grid';
+import CustomCarousel from './Carousel/Carousel';
+import * as ReactMarkdown from 'react-markdown';
+import Markdown from './Markdown';
 
 const Home = () => {
     return (
-        <Jumbotron>
-            <h1>Hello, world!</h1>
-            <p>
-                Welcome to DJ's React Boilerplate.
-                See the source code <a href="https://github.com/dylanljenkins/djs-react-boilerplate">here</a>.
-            </p>
-            <p>Username: admin<br />Password: password</p>
-        </Jumbotron>
-    );
+        <div>
+            <CustomCarousel/>
+            <Grid>
+                <PageHeader>Building affordable, quality homes since 1957</PageHeader>
+                <Row>
+                    <Col sm={6}>
+                        <ReactMarkdown source={Markdown}/>
+                    </Col>
+                    <Col sm={6}>
+                        <img src="/assets/16bw-1.jpg" width="100%" height="auto"/>
+                    </Col>
+                </Row>
+            </Grid>
+        </div>);
 };
 
 export default Home;

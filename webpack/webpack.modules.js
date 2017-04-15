@@ -28,7 +28,9 @@ exports.loadDefault = [
     {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/font-woff" },
     {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/octet-stream" },
     {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
-    {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=image/svg+xml" }
+    {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=image/svg+xml" },
+    {test: /\.png(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
+    {test: /\.jpg(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
 ];
 
 exports.loadScss = [
@@ -41,7 +43,13 @@ exports.loadScss = [
         test: /\.scss$/,
         exclude: [/node_modules/, /global.scss/],
         use: ["style-loader", "typings-for-css-modules-loader?modules&namedExport&camelCase", "sass-loader"]
+    },
+    {
+        test: /\.css$/,
+        include: /flexboxgrid/,
+        use: ["style-loader", "css-loader"]
     }
+
 ];
 
 exports.extractScss = [

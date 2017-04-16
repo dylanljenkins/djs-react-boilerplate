@@ -5,6 +5,8 @@
     "tslint-eslint-rules"
   ],
   "rules": {
+    "arrow-parens": false,
+    "jsx-no-multiline-js": fa
     "object-literal-sort-keys": false,
     "jsx-boolean-value": false,
     "ordered-imports": false,

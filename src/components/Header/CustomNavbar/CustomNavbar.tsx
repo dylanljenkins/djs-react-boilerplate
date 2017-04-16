@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Nav, Navbar, NavDropdown, MenuItem} from 'react-bootstrap';
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import * as styles from './customNavbar.scss';
 import {Link} from 'react-router-dom';
 import {RouterNavItem, RouterMenuItem} from './RouterItem';

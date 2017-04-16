@@ -1,0 +1,29 @@
+{
+  "count": "2",
+  "results": [
+    {
+      "title": "Harbour 435",
+      "location": {
+        "address": "No. 10 Gramercy Boulevard"
+      },
+      "details": {
+        "price": "725000",
+        "baths": "2",
+        "beds": "4",
+        "cars": "2"
+      }
+    },
+    {
+      "title": "Resort 408",
+      "location": {
+        "address": "No. 26 Woodlea Boulevard"
+      },
+      "details": {
+        "price": "869000",
+        "baths": "5",
+        "beds": "4",
+        "cars": "2"
+      }
+    }
+  ]
+}

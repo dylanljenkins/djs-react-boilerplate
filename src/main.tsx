@@ -6,22 +6,31 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import {Route} from 'react-router';
 import {BrowserRouter as Router} from 'react-router-dom';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
+import {MDPage} from './components/CMS/MD';
+import * as styles from './styles/main.scss';
 
 // Style imports.
 import './styles/global.scss';
+import {CustomSpinner} from './components/Spinner/CustomSpinner';
+
+// TODO Markdown "static page" CMS. Convert to JSON and post to Mongo. Pull from Mongo and display in an MDView.
+// TODO "IProperty" CMS. Create and manage properties from an admin interface. Categorise these properties.
+// TODO Store and retrieve these properties as JSON in Mongo. Retrieve and for use listing/displaying the properties.
+
+// TODO Mock up output JSON for both of these tasks, then store them in Mongo. Then think about creating them from a gui.
 
 render(
     <Router history={history}>
-        <div>
-            <Header/>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact}/>
+        <div className={styles.root}>
+            <div className={styles.content}>
+                <Header/>
+                <Route exact path="/" component={Home}/>
+                <Route path="/about" component={() => (<MDPage title="About Us"/>)}/>
+                <Route path="/spinner" component={CustomSpinner}/>
+            </div>
             <Footer/>
         </div>
     </Router>,

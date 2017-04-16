@@ -2,7 +2,7 @@ import * as React from 'react';
 import { withRouter } from 'react-router-dom';
 import {MenuItem, NavItem} from 'react-bootstrap';
 
-// Todo get component to update when route changes.
+// TODO set up active links.
 
 class ComponentWithoutRouter extends React.Component<any, any> {
 

@@ -46,7 +46,7 @@ exports.loadScss = [
     },
     {
         test: /\.css$/,
-        include: /flexboxgrid/,
+        include: /node_modules/,
         use: ["style-loader", "css-loader"]
     }
 

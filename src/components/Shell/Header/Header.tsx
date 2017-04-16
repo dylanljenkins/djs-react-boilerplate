@@ -1,10 +1,13 @@
 import * as React from 'react';
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
-import * as styles from './customNavbar.scss';
+import styles from './header.scss';
 import {Link} from 'react-router-dom';
 import {RouterNavItem, RouterMenuItem} from './RouterItem';
 
-const CustomNavbar = () => {
+// Need to use this for MenuItemWithoutRouter links.
+// https://github.com/react-bootstrap/react-router-bootstrap/issues/186
+
+const Header = () => {
     return (
         <Navbar inverse className={styles.navbar}>
             <Navbar.Header>
@@ -49,4 +52,4 @@ const CustomNavbar = () => {
     );
 };
 
-export default CustomNavbar;
+export default Header;

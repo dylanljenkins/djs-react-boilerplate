@@ -42,7 +42,7 @@ exports.loadScss = [
     {
         test: /\.scss$/,
         exclude: [/node_modules/, /global.scss/],
-        use: ["style-loader", "typings-for-css-modules-loader?modules&namedExport&camelCase", "sass-loader"]
+        use: ["style-loader", "css-loader?modules&namedExport&camelCase", "sass-loader"]
     },
     {
         test: /\.css$/,
@@ -66,7 +66,7 @@ exports.extractScss = [
         exclude: [/node_modules/, /global.scss/],
         use: ExtractTextPlugin.extract({
             fallback: "style-loader",
-            use: ["typings-for-css-modules-loader?modules&namedExport&camelCase&localIdentName=PURIFY_[hash:base64:5]", autoprefix(), "sass-loader"]
+            use: ["css-loader?modules&namedExport&camelCase&localIdentName=PURIFY_[hash:base64:5]", autoprefix(), "sass-loader"]
         }),
     }
 ];

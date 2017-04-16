@@ -8,6 +8,7 @@ import {Row, Col} from 'react-flexbox-grid';
 import CustomCarousel from './Carousel/Carousel';
 import {mdStore} from '../../stores/MDStore';
 import {MDView} from '../CMS/MD';
+import {Page} from '../Shell/Page';
 
 class Home extends React.Component<any, any> {
 
@@ -21,8 +22,7 @@ class Home extends React.Component<any, any> {
         return (
             <div>
                 <CustomCarousel/>
-                <Grid>
-                    <PageHeader>Building affordable, quality homes since 1957</PageHeader>
+                <Page title="Building affordable, quality homes since 1957">
                     <Row>
                         <Col sm={6}>
                             <MDView title={this.pageTitle}/>
@@ -31,7 +31,7 @@ class Home extends React.Component<any, any> {
                             <img src="/assets/16bw-1.jpg" width="100%" height="auto"/>
                         </Col>
                     </Row>
-                </Grid>
+                </Page>
             </div>
         );
     }

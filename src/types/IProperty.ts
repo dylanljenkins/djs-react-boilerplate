@@ -12,6 +12,8 @@ interface IProperty {
     details: {
         price: number;
         beds: number;
+        parks: number;
+        size: number;
     };
 }
 

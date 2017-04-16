@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Carousel} from 'react-bootstrap';
-import * as styles from './carousel.scss';
+import styles from './carousel.scss';
 
 const CustomCarousel = () => {
     return (

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Spinner from 'react-spinkit';
-import * as styles from './customSpinner.scss';
+import styles from './customSpinner.scss';
 import {Col, Row} from 'react-flexbox-grid';
 
 // A centered loading spinner.

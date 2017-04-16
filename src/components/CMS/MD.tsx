@@ -4,6 +4,7 @@ import {observer} from 'mobx-react';
 import {Grid, PageHeader} from 'react-bootstrap';
 import * as ReactMarkdown from 'react-markdown';
 import {CustomSpinner} from '../Spinner/CustomSpinner';
+import {Page} from 'components/Shell/Page';
 
 // Renders markdown if the given title exists in the MDStore.
 // If not, start loading the MD and display a loading spinner.
@@ -22,9 +23,8 @@ export const MDView = observer((props: {title: string}) => {
 
 export const MDPage = (props: {title: string}) => {
     return (
-        <Grid>
-            <PageHeader>{props.title}</PageHeader>
+        <Page title={props.title}>
             <MDView title={props.title}/>
-        </Grid>
+        </Page>
     );
 };

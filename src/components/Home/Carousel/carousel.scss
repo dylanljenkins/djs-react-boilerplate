@@ -11,15 +11,15 @@
 
 .image1 {
   @extend .image;
-  background-image: url(./c1.jpg);
+  background-image: url(./../../../assets/c1.jpg);
 }
 
 .image2 {
   @extend .image;
-  background-image: url(./c2.jpg);
+  background-image: url(./../../../assets/c2.jpg);
 }
 
 .image3 {
   @extend .image;
-  background-image: url(./c3.jpg);
+  background-image: url(./../../../assets/c3.jpg);
 }

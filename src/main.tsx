@@ -6,15 +6,16 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import {Route} from 'react-router';
 import {BrowserRouter as Router} from 'react-router-dom';
-import Header from './components/Header/Header';
+import Header from './components/Shell/Header/Header';
 import Home from './components/Home/Home';
-import Footer from './components/Footer/Footer';
+import {Footer} from './components/Shell/Footer/Footer';
 import {MDPage} from './components/CMS/MD';
+import {CustomSpinner} from './components/Spinner/CustomSpinner';
+import {PropertyGrid} from './components/Property/ProperyList';
 import * as styles from './styles/main.scss';
 
 // Style imports.
 import './styles/global.scss';
-import {CustomSpinner} from './components/Spinner/CustomSpinner';
 
 // TODO Markdown "static page" CMS. Convert to JSON and post to Mongo. Pull from Mongo and display in an MDView.
 // TODO "IProperty" CMS. Create and manage properties from an admin interface. Categorise these properties.
@@ -30,6 +31,7 @@ render(
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={() => (<MDPage title="About Us"/>)}/>
                 <Route path="/spinner" component={CustomSpinner}/>
+                <Route path="/properties" component={PropertyGrid}/>
             </div>
             <Footer/>
         </div>

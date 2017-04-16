@@ -19,10 +19,10 @@ const Header = () => {
             <Navbar.Collapse>
                 <Nav>
                     <NavDropdown title="Home Designs" id="nav-designs">
-                        <RouterMenuItem to="/about">Double Storey Collection</RouterMenuItem>
-                        <RouterMenuItem to="/about">Single Storey Collection</RouterMenuItem>
-                        <RouterMenuItem to="/about">Z Series Collection</RouterMenuItem>
-                        <RouterMenuItem to="/about">Display Homes</RouterMenuItem>
+                        <RouterMenuItem to="/properties">Double Storey Collection</RouterMenuItem>
+                        <RouterMenuItem to="/properties">Single Storey Collection</RouterMenuItem>
+                        <RouterMenuItem to="/properties">Z Series Collection</RouterMenuItem>
+                        <RouterMenuItem to="/properties">Display Homes</RouterMenuItem>
                     </NavDropdown>
                     <RouterNavItem to="/about">House &amp; Land</RouterNavItem>
                     <NavDropdown title="Projects" id="nav-projects">

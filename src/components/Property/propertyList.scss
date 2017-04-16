@@ -1,3 +1,10 @@
 .panel {
-  width: 18rem;
+  flex-basis: 33rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
 }

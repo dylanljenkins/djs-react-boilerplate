@@ -15,9 +15,11 @@ const PropertyGridItem = (props: {property: IProperty}) => {
 export const PropertyGrid = () => {
     return (
         <Page title="Property Grid">
-            {propertyStore.properties.map((property, index) => {
-                return <PropertyGridItem key={index} property={property}/>
-            })}
+            <div className={styles.container}>
+                {propertyStore.properties.map((property, index) => {
+                    return <PropertyGridItem key={index} property={property}/>
+                })}
+            </div>
         </Page>
     )
 };

@@ -8,7 +8,6 @@ const isProduction = process.argv.indexOf('-p') >= 0;
 const common = {
     resolve: modules.resolve,
     entry: modules.entry,
-    output: modules.output,
     plugins: [
         modules.htmlWebpackPlugin
     ],
@@ -19,6 +18,7 @@ const common = {
 
 const dev = {
     devtool: 'eval-source-map',
+    output: modules.devOutput,
     devServer: modules.devServer,
     module: {
         rules: modules.loadScss
@@ -30,7 +30,9 @@ const prod = {
         modules.uglifyJsPlugin,
         modules.extractTextPlugin,
         modules.minifyCssPlugin,
+        modules.compressionPlugin
     ],
+    output: modules.prodOutput,
     module: {
         rules: modules.extractScss
     }

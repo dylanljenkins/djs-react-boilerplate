@@ -45,7 +45,6 @@ class UserStore {
     public updatePassword = (e) => {
         this.passwordField = e.target.value;
     }
-
 }
 
 export const userStore = new UserStore();

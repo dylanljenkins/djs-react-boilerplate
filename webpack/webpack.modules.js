@@ -6,6 +6,7 @@ const paths = require('./paths');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const cssnano = require('cssnano');
 
 const autoprefix = () => {
@@ -33,6 +34,13 @@ exports.loadDefault = [
     {test: /\.jpg(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
 ];
 
+exports.loadJs = [
+    {
+        test: /\.js$/,
+        use: ["babel-loader"]
+    }
+];
+
 exports.loadScss = [
     {
         test: /\.scss$/,
@@ -49,7 +57,6 @@ exports.loadScss = [
         include: /node_modules/,
         use: ["style-loader", "css-loader"]
     }
-
 ];
 
 exports.extractScss = [
@@ -78,10 +85,16 @@ exports.devServer = {
     contentBase: paths.src,
 };
 
-exports.output = {
+exports.devOutput = {
     path: paths.build,
     filename: 'bundle.js',
     publicPath: '/'
+};
+
+exports.prodOutput = {
+    path: paths.static,
+    filename: 'bundle.js',
+    publicPath: '/static'
 };
 
 exports.resolve = {
@@ -119,6 +132,14 @@ exports.minifyCssPlugin = new OptimizeCSSAssetsPlugin({
             safe: true
         }
     }
+});
+
+exports.compressionPlugin = new CompressionPlugin({
+    asset: "[path].gz[query]",
+    algorithm: "gzip",
+    test: /\.js$|\.css$/,
+    threshold: 10240,
+    minRatio: 0.8
 });
 
 exports.extractTextPlugin = new ExtractTextPlugin('styles.css');

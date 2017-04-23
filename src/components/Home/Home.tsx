@@ -28,7 +28,7 @@ class Home extends React.Component<any, any> {
                             <MDView title={this.pageTitle}/>
                         </Col>
                         <Col sm={6}>
-                            <img src="/assets/16bw-1.jpg" width="100%" height="auto"/>
+                            <img src="../../static/16bw-1.jpg" width="100%" height="auto"/>
                         </Col>
                     </Row>
                 </Page>

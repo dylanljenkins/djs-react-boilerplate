@@ -26,12 +26,12 @@ exports.loadDefault = [
         exclude: /node_modules/,
         use: ["babel-loader", "awesome-typescript-loader"]
     },
-    {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/font-woff" },
-    {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/octet-stream" },
-    {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
-    {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=image/svg+xml" },
-    {test: /\.png(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
-    {test: /\.jpg(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader" },
+    {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/font-woff&name=/[name].[ext]" },
+    {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/font-sfnt&name=/[name].[ext]" },
+    {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=application/vnd.ms-fontobject&name=/[name].[ext]" },
+    {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: "url-loader?limit=10000&mimetype=image/svg+xml&name=/[name].[ext]" },
+    {test: /\.png(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader?name=/[name].[ext]" },
+    {test: /\.jpg(\?v=\d+\.\d+\.\d+)?$/, use: "file-loader?name=/[name].[ext]" },
 ];
 
 exports.loadJs = [
@@ -73,8 +73,16 @@ exports.extractScss = [
         exclude: [/node_modules/, /global.scss/],
         use: ExtractTextPlugin.extract({
             fallback: "style-loader",
-            use: ["css-loader?modules&namedExport&camelCase&localIdentName=PURIFY_[hash:base64:5]", autoprefix(), "sass-loader"]
+            use: ["css-loader?modules&namedExport&camelCase", autoprefix(), "sass-loader"]
         }),
+    },
+    {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: ["css-loader", autoprefix()]
+        })
     }
 ];
 
